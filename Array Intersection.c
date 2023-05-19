@@ -26,9 +26,9 @@ int main()
     int array3[x];
     int size3 = 0;
 
-    for(int i=0; i<5; i++)  // Adding Value to Intersection Arry
+    for(int i=0; i<size1; i++)  // Adding Value to Intersection Arry
     {
-        for(int j=0; j<5; j++)
+        for(int j=0; j<size2; j++)
         {
             if(array1[i]==array2[j])
             {
