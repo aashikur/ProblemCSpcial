@@ -1,21 +1,26 @@
 #include<stdio.h>
-#define max 7
+#include<stdbool.h>
+
+
 int main()
 {
     int arr[max] = {1,2,3,4,5,6,7};
-    int target = 8;
-    int res = -1;
-    // Find 8 // if Yes => index; else -1;
+    int x = 9;
+    bool flag = false; // false means Not Found
+    int Idx = -1;
 
     for(int i = 0; i<max-1; i++)
     {
-        if(arr[i] == target){
-            res = i;
+        if(arr[i] == x){
+            flag = true; // true means Found
             break;
         }
     }
 
-    printf("Result is: %d\n",res);
+    if(flag)
+        printf("Number found and  Index: %d\n",Idx);
+    else
+        printf("Number Not There!\n");
 
 
     return 0;
