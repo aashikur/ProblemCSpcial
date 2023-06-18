@@ -17,7 +17,7 @@ int main()
     UniqLenth = 0;
 
     i = 0;
-    while(scr[i] != '\0')
+    while(Source[i] != '\0')
         i++;
 
     SourceLenth = i;
