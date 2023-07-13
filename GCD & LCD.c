@@ -1,3 +1,10 @@
+// GCD (4,8) = 4
+// LCD (4,8) = 8
+
+// GCD (6,8) = 2
+// LCD (6,8) = 24
+
+
 #include<stdio.h>
 
 int gcd(int x, int y);
@@ -20,7 +27,6 @@ int main()   // LCD && GCD
 
 }
 
-
 int  gcd(int x,int y)
 {
     int min = (x<y)? x:y;
@@ -41,5 +47,21 @@ int  gcd(int x,int y)
 
 int  lcd(int x,int y)
 {
-    return (x*y)/gcd(x,y);
+    // 2nd Process
+    // LCD = (x*y)/gcd(x,y)
+
+        int max = (x>y)? x:y;
+        int lcd = max;
+
+    while(lcd <= x*y)
+    {
+        if(lcd%x == 0 && lcd%y == 0)
+            break;
+        else
+            {
+                lcd += max;
+                printf("max: %d\n",max);
+            }
+    }
+    return lcd;
 };
