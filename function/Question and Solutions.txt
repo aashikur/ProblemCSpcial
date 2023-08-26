@@ -1,0 +1,13 @@
+https://www.programiz.com/c-programming/c-functions-examples
+
+1. Display all prime numbers between two Intervals
+2. Check prime and Armstrong number by making functions
+3. Check whether a number can be expressed as the sum of two prime numbers
+4. Find the sum of natural numbers using recursion
+5. Calculate the factorial of a number using recursion
+6. Find G.C.D using recursion
+7. Reverse a sentence using recursion
+8. Calculate the power of a number using recursion
+9. Convert a binary number to decimal and vice-versa
+10.Convert an octal Number to decimal and vice-versa
+11.Convert a binary number to octal and vice-versa
