@@ -1,0 +1,72 @@
+#include <bits/stdc++.h>
+using namespace std;
+// Both Armstrong and Prime
+
+int isPrime(long long int x)
+{
+    int cnt = 0;
+    for(int i = 2; i*i <=x; i++)
+    {
+        if(x%i==0)
+        {
+            cnt++;
+            break;
+        }
+    }
+    if(cnt == 0 && x>1)
+        return 1;
+    else
+        return 0;
+}
+
+int isArmstrong(long long int x)
+{
+    long long int sum = 0;
+
+    long long int y = x;
+    while(x)
+    {
+        int r = x%10;
+        sum+= r*r*r;
+        x = x/10;
+    }
+
+    if(y == sum )
+        return 1;
+    else
+        return 0;
+}
+
+void check (long long int x)
+{
+
+    int a = isPrime(x);
+    int b = isArmstrong(x);
+
+    if(a+b==0) return;
+                    cout << x << " ";
+    if(a)           cout <<  "Prime ";
+    if(a+b == 2)    cout << "&  &   & ";
+    if(b)           cout << "Armstrong ";
+                    cout << "Number"<<endl;
+
+//    if(a+b == 2) cout << x << " " ;
+//    else cout << x << " is Not. Trying next..."<< endl;
+
+}
+
+
+int main()
+{
+
+    long long int num;
+    cin >> num;
+
+    for(long long int i = 1; i<=num ; i++)
+    {
+        check(i);
+
+    }
+
+    return 0;
+}
